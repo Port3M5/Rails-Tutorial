@@ -4,7 +4,7 @@
   <article id="post-<%= post.id %>">
     <h1><%= link_to post.title, post %></h1>
     <span>Posted by: <%= post.author %> on: <%= post.created_at.strftime("%d %B %Y") %></span>
-    <p><%= link_to pluralize(post.comments.count, "Comment"), post, :anchor => "comments" %></p>
+    <p><%= link_to pluralize(post.comments.count, "Comment"), post_path(post, :anchor => "comments") %></p>
   </article>
 <% end %> 
 <%= link_to 'New Post', new_post_path %>
