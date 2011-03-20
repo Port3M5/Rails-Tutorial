@@ -1,4 +1,22 @@
-<h1><%= @post.title %></h1>
-<span>Author: <%= @post.author %></span>
-<span>Created on: <%= @post.created_at.strftime "%d %B %Y" %></span>
-<p><%= @post.body %></p>
+<article>
+  <header>
+    <hgroup>
+      <h1><%= @post.title %></h1>
+      <h2>Author: <%= @post.author %></h2>
+      <h2>Created on: <%= @post.created_at.strftime "%d %B %Y" %></h2>
+    </hgroup>
+  </header>
+  <p><%= @post.body %></p>
+
+  <section id="comment">
+    <%= render "comments/form" %>
+  </section>
+
+  <section id="comments">
+    <h1>Comments</h1>
+    <%= render @comments %>
+  </section>
+
+</article>
+
+<%= link_to 'Back to Posts', posts_path %>
