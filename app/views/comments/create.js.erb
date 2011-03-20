@@ -1,0 +1,13 @@
+/* Insert a notice */
+
+/* Replace the comment count */
+$('#comments-count').html("<%= pluralize(Comment.count, 'Comment') %>");
+
+/* Add the new comment to the bottom of the comments list */
+$('#comments').append("<%= escape_javascript(render(@comment)) %>");
+
+/* Hightlight the new comment */
+$('#<%= @comment.id %>').effect('highlight', {}, 3000);
+
+/* Reset the comment form */
+$('#new_comment')[0].reset();

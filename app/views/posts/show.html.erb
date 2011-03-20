@@ -14,6 +14,7 @@
 
   <section id="comments">
     <h1>Comments</h1>
+    <span id="comments-count"><%= pluralize(@comments.count, "Comment") %></span>
     <%= render @comments %>
   </section>
 

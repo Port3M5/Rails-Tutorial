@@ -1,0 +1,5 @@
+/* Fade out the comment */
+$('#<%= @comment.id %>').fadeOut();
+
+/* Update the comment count */
+$('#comments-count').html("<%= pluralize(Comment.count, "Comment") %>");
