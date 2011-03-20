@@ -1,0 +1,10 @@
+<h1>Posts</h1>
+
+<% @posts.each do |post| %>
+  <article id="post-<%= post.id %>">
+    <h1><%= link_to post.title, post %></h1>
+    <span>Posted by: <%= post.author %> on: <%= post.created_at.strftime("%d %B %Y") %></span>
+    <p><%= post.body %></p>
+  </article>
+<% end %> 
+<%= link_to 'New Post', new_post_path %>
