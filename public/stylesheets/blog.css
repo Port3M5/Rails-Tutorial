@@ -1,0 +1,27 @@
+body {
+  background: url('../images/gradient.png') top repeat-x;
+  padding: 0; margin: 0;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+#wrapper {
+  background: white;
+  width: 960px;
+  margin: 1em auto;
+  border: 1px solid black;
+}
+
+#wrapper > header {
+  padding: 0.5em;
+  border-bottom: 5px solid black;
+  background: AliceBlue;
+}
+
+#wrapper > article {
+  padding: 0.5em;
+  border-top: 3px solid black;
+}
+
+#wrapper > article:last-child {
+  border-bottom: 3px solid black;
+}

@@ -1,5 +1,7 @@
+<% if not comment.id.nil? %>
 <div id="<%= comment.id %>">
   <header>
+    <%= link_to "Permalink", post_path(@post, :anchor => comment.id) %>
     <h1>Author: <%= comment.commenter %></h1>
   </header>
   <p><%= comment.body %></p>
@@ -7,3 +9,4 @@
     <li><%= link_to 'Delete', [comment.post, comment], :method => :delete, :class => "delete", :remote => true %></li>
   </ul>
 </div>
+<% end %>

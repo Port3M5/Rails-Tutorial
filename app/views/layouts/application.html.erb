@@ -7,8 +7,9 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="wrapper">
+  <header><h1><%= link_to "Blog", root_path %></h1></header>
+  <%= yield %>
+</div>
 </body>
 </html>
